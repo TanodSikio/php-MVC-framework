@@ -9,6 +9,7 @@
         header, footer{background: #2E7D32; color: white; padding: 16px;}
         main{padding: 24px;}
         a{color: white; margin-right: 12px;}
+        main a{color: blue;}
     </style>
 </head>
 <body>
@@ -16,7 +17,6 @@
         <h2>Mini MVC School</h2>
         <nav>
             <a href="?url=students">Students</a>
-            <a href="?url=about">About</a>
         </nav>
     </header>
 

@@ -17,7 +17,7 @@
         public function setName($name){$this->name = $name;}
 
         public function getCourse(){return $this->course;}
-        public function setCourse($course){$this->coure = $course;}
+        public function setCourse($course){$this->course = $course;}
 
         public function getAllStudents(){
             $pdo = Database::connect();
@@ -36,6 +36,13 @@
             $stmt = $pdo->prepare('DELETE FROM students WHERE id=?');
 
             return $stmt->execute([$id]);
+        }
+
+        public function insertStudent($name, $course): bool{
+            $pdo = Database::connect();
+            $stmt = $pdo->prepare('INSERT INTO students (student_name, course) VALUES (?, ?)');
+            
+            return $stmt->execute([$name, $course]);
         }
     }
 ?>

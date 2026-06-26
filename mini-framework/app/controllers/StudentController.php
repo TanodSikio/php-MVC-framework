@@ -28,9 +28,22 @@
         public function table(){
             $students = $this->studentService->getStudentList();
 
-            $this->renderPartial('student/table', [
+            $this->renderPartial('students/table', [
                 'students'=> $students
             ]);
+        }
+
+        public function create(){
+            $this->view('students/create');
+        }
+
+        public function store(){
+            $this->studentService->addStudent(
+                $_POST['name'],
+                $_POST['course']
+            );
+            header('Location: ?url=students');
+            exit;
         }
     }
 ?>

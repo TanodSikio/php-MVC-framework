@@ -22,7 +22,14 @@
             usort($students, function(Student $first, Student $second){
                 return strcmp($first->getName(), $second->getName());
             });
-             return $students;
+            return $students;
+        }
+
+        public function addStudent($name, $course): bool{
+            if(!$name || !$course){
+                return false;
+            }
+            return $this->studentModel->insertStudent($name, $course);
         }
     }
 ?>

@@ -6,7 +6,7 @@ function bindDeleteButtons(){
 
         const id = $(this).data('id');
 
-        $.get('?ur=students/delete&id=' + id, function (html){
+        $.get('?url=students/delete&id=' + id, function (html){
             $('#studentTable').html(html);
             bindDeleteButtons();
         });

@@ -1,10 +1,9 @@
 <?php
     return [
-        'students'        => ['StudentController', 'index'],
-        'students/create' => ['StudentController', 'create'],
-        'students/store'  => ['StudentController', 'store'],
-        'students/delete' => ['StudentController', 'delete'],
-        'students/table'  => ['StudentController', 'table'],
-        'about'           => ['AboutController', 'index'],
+        'students'        => [StudentController::class, 'index'],
+        'students/create' => [StudentController::class, 'create'],
+        'students/store'  => [StudentController::class, 'store'],
+        'students/delete' => [StudentController::class, 'delete'],
+        'students/table'  => [StudentController::class, 'table'],
     ];
 ?>
